@@ -1,0 +1,20 @@
+xiQ_Agent_Version: 0.0.1
+info:
+  title: This is xiQ Agent
+  description: An API for querying and filtering documents based on natural language queries and metadata
+  version: 1.0.0
+servers:
+  - url: http://127.0.0.1:8000/agent-api
+paths:
+  /xiQ_company_description:
+    get:
+      summary: Returns xiQ company description.
+      responses:
+        '200':
+          description: The request was successful and the response body contains the xiQ company description.
+          content:
+            application/json:
+              schema:
+                type: object
+        '500':
+          description: An error occurred on the server while processing the request.
